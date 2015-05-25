@@ -1,7 +1,7 @@
 # Habidar (App Android)
 
-* O Habidar é um jogo de cálculos matemáticos aleatórios, onde o jogador tem um determinado tempo para responder a um
-cálculo matemático de acordo com o tipo de jogo escolhido, somando pontos seu recorde.
+* O Habidar é um jogo de cálculos matemáticos onde o jogador tem um determinado tempo para responder a um
+cálculo aleatório de acordo com o tipo de jogo escolhido, somando pontos para o seu recorde.
 * Android 4.2.2
 * O jogo está em desenvolvimento, o projeto estará disponível quando for concluído.
 * As imagens são apenas uma prévia do design do aplicativo, muitas alterações serão realizadas até a versão final.
