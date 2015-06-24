@@ -12,6 +12,10 @@ cálculo aleatório de acordo com o tipo de jogo escolhido, somando pontos para 
 
 <img src="https://github.com/lucasmlima08/Habidar/blob/master/img_menu.png" width="200" />
 
+> Tela de configurações:
+
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_configuracoes.png" width="200" />
+
 > Tela de escolha do tipo de jogo:
 
 <img src="https://github.com/lucasmlima08/Habidar/blob/master/img_escolha.png" width="200" />
