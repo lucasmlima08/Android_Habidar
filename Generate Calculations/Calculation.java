@@ -12,18 +12,18 @@ import java.util.Random;
 
 public class Calculation {
 
-    public String equationString = ""; // Formatação do cálculo na tela.
-    public int[] optionsChoose = null; // Opções de escolha.
+    public String equationString = ""; // FormataÃ§Ã£o do cÃ¡lculo na tela.
+    public int[] optionsChoose = null; // OpÃ§Ãµes de escolha.
     public int responseSolution = -1; // Resposta esperada.
-    public int resultCalculate = 0; // Resultado do cálculo.
+    public int resultCalculate = 0; // Resultado do cÃ¡lculo.
 
-    //- Retorna um array com 3 números aleatórios (entre 0 e 99).
+    //- Retorna um array com 3 nÃºmeros aleatÃ³rios (entre 0 e 99).
     private int[] generationNumbers(){
         int[] numbers = new int[]{randomNumber_1(100), randomNumber_1(100), randomNumber_1(100)};
         return numbers;
     }
 
-    //- Retorna um array com 2 operadores aritméticos.
+    //- Retorna um array com 2 operadores aritmÃ©ticos.
     private char[] generationArithmetics(){
         char[] arithmetic = new char[]{'+','-'};
         int op1 = randomNumber_1(2);
@@ -32,33 +32,30 @@ public class Calculation {
         return generation;
     }
 
-    //- Retorna o resultado do cálculo.
+    //- Retorna o resultado do cÃ¡lculo.
     private int returnResult(String[] numbers, char[] arithmetics){
         int result = Integer.parseInt(numbers[0]);
         result = arithmetics[0] == '+' ? result + Integer.parseInt(numbers[1]) : result - Integer.parseInt(numbers[1]);
         result = arithmetics[1] == '+' ? result + Integer.parseInt(numbers[2]) : result - Integer.parseInt(numbers[2]);
-        //System.out.println("Calculo: "+Arrays.toString(numbers)+" Resultado: "+result);
         return result;
     }
 
-    //- Condições para as opções de escolha.
+    //- CondiÃ§Ãµes para as opÃ§Ãµes de escolha.
     private int[] conditionsGenerationOptionsChoose(int[] optionsChoose, int type){
         for (int i=0; i < optionsChoose.length; i++){
-            // Para os tipos de jogo [1,2,3] as opções devem ter apenas 1 dígito.
-            if ((type == 1 || type == 2 || type == 3) && (optionsChoose[i] > 9)){
+            // Para os tipos de jogo [1,2,3] as opÃ§Ãµes devem ter apenas 1 dÃ­gito.
+            if ((type == 1 || type == 2 || type == 3) && (optionsChoose[i] > 9))
                 optionsChoose[i] -= 7;
-            }
-            // As opções de escolha não podem ser negativas, exceto no tipo de jogo [5].
-            if ((type != 5) && (optionsChoose[i] < 0)){
+            // As opÃ§Ãµes de escolha nÃ£o podem ser negativas, exceto no tipo de jogo [5].
+            if ((type != 5) && (optionsChoose[i] < 0))
                 optionsChoose[i] += 7;
-            }
         }
         return optionsChoose;
     }
 
-    //- Gera as opções de escolha do cálculo gerado.
-    //- O método sorteia um valor aleatório entre result-6 e result e o inclui na primeira opção.
-    //- As próximas posições serão os números posteriores do número sorteado.
+    //- Gera as opÃ§Ãµes de escolha do cÃ¡lculo gerado.
+    //- O mÃ©todo sorteia um valor aleatÃ³rio entre result-6 e result e o inclui na primeira opÃ§Ã£o.
+    //- As prÃ³ximas posiÃ§Ãµes serÃ£o os nÃºmeros posteriores do nÃºmero sorteado.
     private int[] generationOptionsChoose(int result, int type){
         int bottom = result - 6;
         int random = randomNumber_2(result, bottom);
@@ -67,50 +64,50 @@ public class Calculation {
             options[i] = random;
             random++;
         }
-        // Faz a checagem das exigências das opções de escolha.
+        // Faz a checagem das exigÃªncias das opÃ§Ãµes de escolha.
         options = conditionsGenerationOptionsChoose(options, type);
-        // Ordena o array após a checagem das exigências.
+        // Ordena o array apÃ³s a checagem das exigÃªncias.
         Arrays.sort(options);
         return options;
     }
 
-    //- Retorna um número aleatório entre 0 e o limite.
+    //- Retorna um nÃºmero aleatÃ³rio entre 0 e o limite.
     private int randomNumber_1(int limit){
         Random random = new Random();
         int generation = random.nextInt(limit);
         return generation;
     }
 
-    //- Retorna um número aleatório entre os limites top e bottom.
+    //- Retorna um nÃºmero aleatÃ³rio entre os limites top e bottom.
     private int randomNumber_2(int top, int bottom){
         Random random = new Random();
         int generation = random.nextInt(top - bottom + 1) + bottom;
         return generation;
     }
 
-    //- Retorna 2 posições aleatórias para esconder no cálculo.
+    //- Retorna 2 posiÃ§Ãµes aleatÃ³rias para esconder no cÃ¡lculo.
     //- Para os tipos de jogo: 1, 2 e 3.
     private int[] generationPositionSelection1(int[] numbers){
         int random1 = randomNumber_1(3);
         int random2 = randomNumber_1(3);
-        // Impede a repetição das posições.
+        // Impede a repetiÃ§Ã£o das posiÃ§Ãµes.
         if (random1 == random2)
             if (randomNumber_1(2) == 0)
-                random2 = random1 == 2 ? 0 : random2+1;
+            	random2 = random1 == 2 ? 0 : random2+1;
             else
                 random2 = random1 == 0 ? 2 : random2-1;
         int[] generation = new int[]{random1, random2};
         return generation;
     }
 
-    //- Retorna 1 posição aleatória para esconder no cálculo.
+    //- Retorna 1 posiÃ§Ã£o aleatÃ³ria para esconder no cÃ¡lculo.
     //- Para o tipo de jogo: 4.
     private int generationPositionSelection2(int[] numbers){
         int random = randomNumber_1(numbers.length);
         return random;
     }
 
-    //- Formatação de números.
+    //- FormataÃ§Ã£o de nÃºmeros.
     private String numberFormat(String numberStr){
     	int number = Integer.parseInt(numberStr);
         DecimalFormat decimalFormat = new DecimalFormat();
@@ -120,8 +117,8 @@ public class Calculation {
     }
 
     //- Para os tipos de jogo: 1 e 2.
-    //- Impede que mais de uma opção chegue ao mesmo resultado.
-    //- Iguala os operadores impedindo que os números se anulem.
+    //- Impede que mais de uma opÃ§Ã£o chegue ao mesmo resultado.
+    //- Iguala os operadores impedindo que os nÃºmeros se anulem.
     private char[] processArithmetics(int[] positions, char[] arithmetics){
     	if (positions[0] == 0 && positions[1] == 1 || positions[0] == 1 && positions[1] == 0){
     		arithmetics[0] = '+';
@@ -137,20 +134,20 @@ public class Calculation {
     	return arithmetics;
     }
 
-    //- Faz o procedimento para igualar os dígitos que serão descobertos.
-    //- Realiza o cálculo.
-    //- Esconde os números sorteados para descoberta do usuário.
+    //- Faz o procedimento para igualar os dÃ­gitos que serÃ£o descobertos.
+    //- Realiza o cÃ¡lculo.
+    //- Esconde os nÃºmeros sorteados para descoberta do usuÃ¡rio.
     private void processCalculate(int[] numbers, char[] arithmetics, int type){
-        // Guarda todos os números no array de strings.
+        // Guarda todos os nÃºmeros no array de strings.
         String[] numberStr = new String[3];
         for (int i=0; i < numbers.length; i++)
         	numberStr[i] = numbers[i] + "";
 
-        // Equação com o dígito da direita escondido.
+        // EquaÃ§Ã£o com o dÃ­gito da direita escondido.
         if (type == 1){
-        	// Gera 2 posição aleatórias entre os 3 números.
-            int[] positions = generationPositionSelection1(numbers);
-        	// Corrige a equação sorteando um dos dígitos dos números escolhidos.
+        	// Gera 2 posiÃ§Ã£o aleatÃ³rias entre os 3 nÃºmeros.
+            	int[] positions = generationPositionSelection1(numbers);
+        	// Corrige a equaÃ§Ã£o sorteando um dos dÃ­gitos dos nÃºmeros escolhidos.
         	int random = randomNumber_1(2);
         	String responseSolution = random == 0 ? numberFormat(numberStr[positions[0]]).charAt(1) + "" : numberFormat(numberStr[positions[1]]).charAt(1) + "";
         	numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? numberStr[positions[0]].charAt(0) + responseSolution : responseSolution;
@@ -159,18 +156,18 @@ public class Calculation {
         	// Calcula o resultado.
         	this.resultCalculate = returnResult(numberStr, arithmetics);
         	this.responseSolution = Integer.parseInt(responseSolution + "");
-        	// Esconde os dígitos.
+        	// Esconde os dÃ­gitos.
         	numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? numberStr[positions[0]].charAt(0) + "?" : "?";
         	numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? numberStr[positions[1]].charAt(0) + "?" : "?";
-            // Gera as opções de escolha.
-            this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
+            	// Gera as opÃ§Ãµes de escolha.
+            	this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
         }
 
-        // Equação com o dígito da esquerda escondido.
+        // EquaÃ§Ã£o com o dÃ­gito da esquerda escondido.
         else if (type == 2){
-        	// Gera 2 posição aleatórias entre os 3 números.
-            int[] positions = generationPositionSelection1(numbers);
-        	// Corrige a equação sorteando um dos dígitos dos números escolhidos.
+        	// Gera 2 posiÃ§Ã£o aleatÃ³rias entre os 3 nÃºmeros.
+            	int[] positions = generationPositionSelection1(numbers);
+        	// Corrige a equaÃ§Ã£o sorteando um dos dÃ­gitos dos nÃºmeros escolhidos.
         	int random = randomNumber_1(2);
         	String responseSolution = random == 0 ? numberStr[positions[0]].charAt(0) + "" : numberStr[positions[1]].charAt(0) + "";
         	numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? responseSolution + numberStr[positions[0]].charAt(1) : responseSolution;
@@ -179,82 +176,82 @@ public class Calculation {
         	// Calcula o resultado.
         	this.resultCalculate = returnResult(numberStr, arithmetics);
         	this.responseSolution = Integer.parseInt(responseSolution + "");
-        	// Esconde os dígitos.
+        	// Esconde os dÃ­gitos.
         	numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? "?" + numberStr[positions[0]].charAt(1) : "?";
         	numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? "?" + numberStr[positions[1]].charAt(1) : "?";
-            // Gera as opções de escolha.
-            this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
+            	// Gera as opÃ§Ãµes de escolha.
+            	this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
         }
 
-        // Equação com primeiro e segundo dígito escondido.
+        // EquaÃ§Ã£o com primeiro e segundo dÃ­gito escondido.
         else if (type == 3){
-        	// Gera 2 posição aleatórias entre os 3 números.
-            int[] positions = generationPositionSelection1(numbers);
-            // Sequência dos números sorteados.
-            int random = randomNumber_1(2); // Sorteia número de 'positions'.
-            String digRandom = numberStr[positions[random]];
-            int random2 = randomNumber_1(digRandom.length()); // Sorteia dígito do número.
-            String responseSolution = digRandom.charAt(random2) + "";
-            // Corrige a equação.
-            int random3 = randomNumber_1(2); // Sorteia o primeiro a receber o digito da direita.
-            if (random3 == 0){
-            	numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? numberStr[positions[0]].charAt(0) + responseSolution : responseSolution;
-            	numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? responseSolution + numberStr[positions[1]].charAt(1) : responseSolution;
-            } else {
-            	numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? responseSolution + numberStr[positions[0]].charAt(1) : responseSolution;
-            	numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? numberStr[positions[1]].charAt(0) + responseSolution : responseSolution;
-            }
+        	// Gera 2 posiÃ§Ã£o aleatÃ³rias entre os 3 nÃºmeros.
+            	int[] positions = generationPositionSelection1(numbers);
+            	// SequÃªncia dos nÃºmeros sorteados.
+            	int random = randomNumber_1(2); // Sorteia nÃºmero de 'positions'.
+            	String digRandom = numberStr[positions[random]];
+            	int random2 = randomNumber_1(digRandom.length()); // Sorteia dÃ­gito do nÃºmero.
+            	String responseSolution = digRandom.charAt(random2) + "";
+            	// Corrige a equaÃ§Ã£o.
+            	int random3 = randomNumber_1(2); // Sorteia o primeiro a receber o digito da direita.
+            	if (random3 == 0){
+            		numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? numberStr[positions[0]].charAt(0) + responseSolution : responseSolution;
+            		numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? responseSolution + numberStr[positions[1]].charAt(1) : responseSolution;
+            	} else {
+            		numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? responseSolution + numberStr[positions[0]].charAt(1) : responseSolution;
+            		numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? numberStr[positions[1]].charAt(0) + responseSolution : responseSolution;
+            	}
         	// Calcula o resultado.
-            this.resultCalculate = returnResult(numberStr, arithmetics);
-            this.responseSolution = Integer.parseInt(responseSolution + "");
-            // Esconde os dígitos.
-            if (random3 == 0){
-            	numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? numberStr[positions[0]].charAt(0) + "?" : "?";
-            	numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? "?" + numberStr[positions[1]].charAt(1) : "?";
-            } else {
-            	numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? "?" + numberStr[positions[0]].charAt(1) : "?";
-            	numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? numberStr[positions[1]].charAt(0) + "?" : "?";
-            }
-            // Gera as opções de escolha.
-            this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
+            	this.resultCalculate = returnResult(numberStr, arithmetics);
+            	this.responseSolution = Integer.parseInt(responseSolution + "");
+            	// Esconde os dÃ­gitos.
+            	if (random3 == 0){
+            		numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? numberStr[positions[0]].charAt(0) + "?" : "?";
+            		numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? "?" + numberStr[positions[1]].charAt(1) : "?";
+            	} else {
+            		numberStr[positions[0]] = numberStr[positions[0]].length() > 1 ? "?" + numberStr[positions[0]].charAt(1) : "?";
+            		numberStr[positions[1]] = numberStr[positions[1]].length() > 1 ? numberStr[positions[1]].charAt(0) + "?" : "?";
+            	}
+        	// Gera as opÃ§Ãµes de escolha.
+            	this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
         }
 
-        // Equação com um número escondido.
+        // EquaÃ§Ã£o com um nÃºmero escondido.
         else if (type == 4){
-        	// Sorteia a posição do número.
+        	// Sorteia a posiÃ§Ã£o do nÃºmero.
         	int positionHide = generationPositionSelection2(numbers);
         	// Calcula o resultado.
         	this.resultCalculate = returnResult(numberStr, arithmetics);
-            this.responseSolution = numbers[positionHide];
-            // Esconde o número.
-            numberStr[positionHide] = "??";
-            // Gera as opções de escolha.
-            this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
+            	this.responseSolution = numbers[positionHide];
+            	// Esconde o nÃºmero.
+            	numberStr[positionHide] = "??";
+            	// Gera as opÃ§Ãµes de escolha.
+            	this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
         }
 
-        // Equação com o resultado escondido.
+        // EquaÃ§Ã£o com o resultado escondido.
         else if (type == 5){
         	this.resultCalculate = returnResult(numberStr, arithmetics);
-            this.responseSolution = this.resultCalculate;
-            // Gera as opções de escolha.
-            this.optionsChoose = generationOptionsChoose(this.resultCalculate, type);
+            	this.responseSolution = this.resultCalculate;
+            	// Gera as opÃ§Ãµes de escolha.
+            	this.optionsChoose = generationOptionsChoose(this.resultCalculate, type);
         }
         
         // String para imprimir na tela..
         String string = "";
         for (int i = 0; i < numbers.length; i++)
-            string += i == 0 ? numberStr[0] : " "+arithmetics[i-1]+" "+numberStr[i];
+        	string += i == 0 ? numberStr[0] : " "+arithmetics[i-1]+" "+numberStr[i];
         string += type != 5 ? " = " + this.resultCalculate : " = " + "??";
         this.equationString = string;
     }
 
-    //- Inicia a geração do cálculo do jogo.
+    //- Inicia a geraÃ§Ã£o do cÃ¡lculo do jogo.
     public void startGame(int type){
-        // Sorteia os números.
+        // Sorteia os nÃºmeros.
         int[] numbers = generationNumbers();
-        // Sorteia os operadores aritméticos.
+        // Sorteia os operadores aritmÃ©ticos.
         char[] arithmetics = generationArithmetics();
-        // Processa o cálculo a partir do tipo de jogo.
+        // Processa o cÃ¡lculo a partir do tipo de jogo.
         processCalculate(numbers, arithmetics, type);
     }
 
