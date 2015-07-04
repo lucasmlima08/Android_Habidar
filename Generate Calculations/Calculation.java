@@ -162,7 +162,6 @@ public class Calculation {
             	// Gera as opções de escolha.
             	this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
         }
-
         // Equação com o dígito da esquerda escondido.
         else if (type == 2){
         	// Gera 2 posição aleatórias entre os 3 números.
@@ -182,7 +181,6 @@ public class Calculation {
             	// Gera as opções de escolha.
             	this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
         }
-
         // Equação com primeiro e segundo dígito escondido.
         else if (type == 3){
         	// Gera 2 posição aleatórias entre os 3 números.
@@ -215,7 +213,6 @@ public class Calculation {
         	// Gera as opções de escolha.
             	this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
         }
-
         // Equação com um número escondido.
         else if (type == 4){
         	// Sorteia a posição do número.
@@ -228,7 +225,6 @@ public class Calculation {
             	// Gera as opções de escolha.
             	this.optionsChoose = generationOptionsChoose(this.responseSolution, type);
         }
-
         // Equação com o resultado escondido.
         else if (type == 5){
         	this.resultCalculate = returnResult(numberStr, arithmetics);
@@ -236,7 +232,6 @@ public class Calculation {
             	// Gera as opções de escolha.
             	this.optionsChoose = generationOptionsChoose(this.resultCalculate, type);
         }
-        
         // String para imprimir na tela..
         String string = "";
         for (int i = 0; i < numbers.length; i++)
@@ -254,17 +249,15 @@ public class Calculation {
         // Processa o cálculo a partir do tipo de jogo.
         processCalculate(numbers, arithmetics, type);
     }
-
-	public static void main(String args[]){
-		
-		Calculation calculation = new Calculation();
-		
-		for (int i = 1; i <= 5; i++){
-			calculation.startGame(i);
-			System.out.println("Calculation Type " + i +": " + calculation.equationString);
-			System.out.println("Expected Value: " + calculation.responseSolution);
-			System.out.println("Choice Options: " + Arrays.toString(calculation.optionsChoose));
-			System.out.println();
-		}
+    
+    public static void main(String args[]){
+	Calculation calculation = new Calculation();
+	for (int i = 1; i <= 5; i++){
+		calculation.startGame(i);
+		System.out.println("Calculation Type " + i +": " + calculation.equationString);
+		System.out.println("Expected Value: " + calculation.responseSolution);
+		System.out.println("Choice Options: " + Arrays.toString(calculation.optionsChoose));
+		System.out.println();
 	}
+    }
 }
