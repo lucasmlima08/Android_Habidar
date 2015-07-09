@@ -1,36 +1,35 @@
 # Habidar (App Android)
 
-* O Habidar é um jogo de cálculos matemáticos onde o jogador tem um determinado tempo para responder a um
-cálculo aleatório de acordo com o tipo de jogo escolhido, somando pontos para o seu recorde.
+* O Habidar consiste em um jogo de cálculos matemáticos onde o jogador precisa descobrir o(s) dígito(s) escondido(s) em um cálculo gerado randomicamente. Os acertos somam pontos para o recorde. O peso da pontuação é dado de acordo com o tempo de resposta e as configurações do jogo. Existem 5 tipos de jogos e em cada cálculo 6 opções ordenadas para o jogador escolher qual delas chega a solução.
 * Android 4.2.2
-* O jogo está em desenvolvimento, o projeto estará disponível quando for concluído.
-* As imagens são apenas uma prévia do design do aplicativo, muitas alterações serão realizadas até a versão final.
+* Play Store: https://play.google.com/store/apps/details?id=com.myllenno.lucas.habidar
 
 # Imagens
 
-> Tela de menu:
+> Menu:
 
 <img src="https://github.com/lucasmlima08/Habidar/blob/master/img_menu.png" width="200" />
 
-> Tela de configurações:
+> Configurações:
 
-<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_configuracoes.png" width="200" />
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_definicoes.png" width="200" />
 
-> Tela de escolha do tipo de jogo:
+> Escolha dos tipos de jogo:
 
 <img src="https://github.com/lucasmlima08/Habidar/blob/master/img_escolha.png" width="200" />
 
-> Tela de simulação dos tipos de jogo:
+> Telas do jogo:
 
-<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_jogoTipo4.png" height="300" />
-<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_jogoTipo3.png" height="300" />
-<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_jogoTipo2.png" height="300" />
-<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_jogoTipo1.png" height="300" />
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_tipo1.png" height="300" />
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_tipo2.png" height="300" />
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_tipo3.png" height="300" />
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_tipo4.png" height="300" />
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_tipo5.png" height="300" />
 
-> Acertou:
+> Aceito:
 
-<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_acertou.png" width="200" />
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_aceito.png" width="200" />
 
-> Errou:
+> Falhou:
 
-<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_errou.png" width="200" />
+<img src="https://github.com/lucasmlima08/Habidar/blob/master/img_falhou.png" width="200" />
