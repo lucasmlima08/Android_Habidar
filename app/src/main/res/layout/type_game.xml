@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.TypeGame"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3.1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/color_text_info"
+                android:textSize="@dimen/titles"
+                android:text="@string/tTypeGame"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"></RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/allBelow"
+                    android:id="@+id/typeGameFull"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:onClick="eventsTypeOfGame"
+                    android:clickable="true"
+                    android:textSize="@dimen/s_buttons"
+                    android:textColor="@color/color_text_buttons" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.15"></RelativeLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/type1"
+                    android:id="@+id/typeGame1"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:clickable="true"
+                    android:textSize="@dimen/s_buttons"
+                    android:textColor="@color/color_text_buttons"
+                    android:onClick="eventsTypeOfGame" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.15"></RelativeLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/type2"
+                    android:id="@+id/typeGame2"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:clickable="true"
+                    android:textSize="@dimen/s_buttons"
+                    android:textColor="@color/color_text_buttons"
+                    android:onClick="eventsTypeOfGame" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.15" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/type3"
+                    android:id="@+id/typeGame3"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:clickable="true"
+                    android:textSize="@dimen/s_buttons"
+                    android:textColor="@color/color_text_buttons"
+                    android:onClick="eventsTypeOfGame" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.15" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/type4"
+                    android:id="@+id/typeGame4"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:clickable="true"
+                    android:textSize="@dimen/s_buttons"
+                    android:textColor="@color/color_text_buttons"
+                    android:onClick="eventsTypeOfGame" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.15" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/type5"
+                    android:id="@+id/typeGame5"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:clickable="true"
+                    android:textSize="@dimen/s_buttons"
+                    android:textColor="@color/color_text_buttons"
+                    android:onClick="eventsTypeOfGame" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"></RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3.45" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3.15">
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                ads:adUnitId="ca-app-pub-1148127483617292/5141952966"
+                ads:adSize="SMART_BANNER" />
+            </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

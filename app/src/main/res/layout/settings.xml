@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Activitys.Settings"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tSettings"
+                android:id="@+id/textView6"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/titles"
+                android:textColor="@color/color_text_info" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.1">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="12"></RelativeLayout>
+
+                <Switch
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/music"
+                    android:id="@+id/music"
+                    android:textSize="@dimen/t_switch"
+                    android:textColor="@color/color_text_info"
+                    android:longClickable="false"
+                    android:checked="true"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.1">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="12" />
+
+                <Switch
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/soundEffects"
+                    android:id="@+id/effectsSound"
+                    android:textSize="@dimen/t_switch"
+                    android:textColor="@color/color_text_info"
+                    android:checked="true"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="Response Time"
+                    android:id="@+id/textView3"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/t_times"
+                    android:textColor="@color/color_text_info"
+                    android:layout_weight="1.5" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/seconds10"
+                        android:id="@+id/tr1"
+                        android:layout_weight="1"
+                        android:background="#fffff2fc"
+                        android:textColor="@color/color_text_buttons"
+                        android:onClick="eventTimeResponse"
+                        android:textSize="@dimen/times" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/seconds20"
+                        android:id="@+id/tr2"
+                        android:layout_weight="1"
+                        android:background="#ff35adec"
+                        android:textColor="@color/color_text_buttons"
+                        android:onClick="eventTimeResponse"
+                        android:textSize="@dimen/times" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/seconds30"
+                        android:id="@+id/tr3"
+                        android:layout_weight="1"
+                        android:background="#fffff2fc"
+                        android:textColor="@color/color_text_buttons"
+                        android:onClick="eventTimeResponse"
+                        android:textSize="@dimen/times" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="Rest Interval"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/t_times"
+                    android:textColor="@color/color_text_info"
+                    android:layout_weight="1.5" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/seconds5"
+                        android:id="@+id/it1"
+                        android:layout_weight="1"
+                        android:background="#fffff2fc"
+                        android:textColor="@color/color_text_buttons"
+                        android:onClick="eventInterval"
+                        android:textSize="@dimen/times" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/seconds10"
+                        android:id="@+id/it2"
+                        android:layout_weight="1"
+                        android:background="#ff35adec"
+                        android:textColor="@color/color_text_buttons"
+                        android:onClick="eventInterval"
+                        android:textSize="@dimen/times" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/seconds15"
+                        android:id="@+id/it3"
+                        android:layout_weight="1"
+                        android:background="#fffff2fc"
+                        android:textColor="@color/color_text_buttons"
+                        android:onClick="eventInterval"
+                        android:textSize="@dimen/times" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.2">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.2">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/bCredits"
+                    android:id="@+id/credits"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:textSize="@dimen/buttons"
+                    android:textColor="@color/color_text_buttons"
+                    android:onClick="eventSettings" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.8"></RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                ads:adUnitId="ca-app-pub-1148127483617292/2188486565"
+                ads:adSize="SMART_BANNER" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

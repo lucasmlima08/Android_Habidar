@@ -1,0 +1,17 @@
+<resources>
+
+    <dimen name="titles">90dp</dimen>
+    <dimen name="subtitle">55dp</dimen>
+    <dimen name="score">55dp</dimen>
+    <dimen name="time_response">40dp</dimen>
+    <dimen name="details">30dp</dimen>
+    <dimen name="records">40dp</dimen>
+    <dimen name="calculation">70dp</dimen>
+    <dimen name="options_choose">50dp</dimen>
+    <dimen name="t_switch">50dp</dimen>
+    <dimen name="t_times">45dp</dimen>
+    <dimen name="times">35dp</dimen>
+    <dimen name="buttons">50dp</dimen>
+    <dimen name="s_buttons">40dp</dimen>
+
+</resources>

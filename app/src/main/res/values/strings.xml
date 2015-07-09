@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Habidar</string>
+    <string name="dateAndCity">Campina Grande (PB), Brasil 2015</string>
+    
+    <!-- Titles of Screens -->
+    <string name="tGame">Discover</string>
+    <string name="tSettings">Settings</string>
+    <string name="tAccepted">Accepted</string>
+    <string name="tFailed">Failed</string>
+    <string name="tRecords">Records</string>
+    <string name="tTypeGame">Types of Games</string>
+    <string name="tInstructions">Instructions</string>
+    <string name="tCredits">Credits</string>
+    
+    <!-- Buttons -->
+    <string name="bPlayGame">Play Game</string>
+    <string name="bSettings">Settings</string>
+    <string name="bRecords">Records</string>
+    <string name="bInstructions">Instructions</string>
+    <string name="bCredits">Credits</string>
+    <string name="bContinue">Continue</string>
+    <string name="bListGames">List of Games</string>
+    <string name="bSaveScore">Save Score</string>
+
+    <!-- Others -->
+    <string name="calculation">Calculation</string>
+    <string name="points">#d%b# points</string>
+    <string name="point">#d%b# point</string>
+    <string name="timeResponse">Time: #d%b#s</string>
+    <string name="goodRest">Good rest..</string>
+    <string name="tryAgain">Try Again</string>
+    <string name="music">Music</string>
+    <string name="soundEffects">Sound Effects</string>
+    <string name="responseTime">Response Time</string>
+    <string name="restInterval">Rest Interval</string>
+    <string name="score">Score</string>
+
+    <!-- Seconds -->
+    <string name="seconds5">5 seconds</string>
+    <string name="seconds10">10 seconds</string>
+    <string name="seconds15">15 seconds</string>
+    <string name="seconds20">20 seconds</string>
+    <string name="seconds30">30 seconds</string>
+
+    <!-- Types of Games -->
+    <string name="allBelow">All Below</string>
+    <string name="type1">Type 1</string>
+    <string name="type2">Type 2</string>
+    <string name="type3">Type 3</string>
+    <string name="type4">Type 4</string>
+    <string name="type5">Type 5</string>
+    
+    <!-- Warnings -->
+    <string name="successfullySaved">Successfully saved!</string>
+    <string name="notName">You can not save without a name!</string>
+    <string name="error">Error while trying to save score!</string>
+    <string name="name">Your name?</string>
+    <string name="save">Save</string>
+    <string name="clickResetRecord1">Click here #d%b# time to delete records!</string>
+    <string name="clickResetRecord2">Click here #d%b# times to delete records!</string>
+    <string name="errorResetRecords">Error trying to delete records!</string>
+    <string name="recordsReset">Records deleted successfully!</string>
+    <string name="errorSaveSettings">Error trying to save settings!</string>
+
+    <string name="instructions">
+        Presentation: \n\n
+        The Habidar consists of a set of mathematical calculations where you need to find out the digit (s) hidden in a computation generated
+        randomly. The sum hits points to his record. The weight of the score is given according to the response time and the game settings.
+        You will have 6 options sorted to choose which one reaches the calculation solution. \n \n
+
+        Game types: \n\n
+        There are 5 different types of selection in the game. \n
+        - Type 1: In this game you must find out the right-most digit of two compute number. \n
+        - Type 2: In this game you must find out the left-most digit of two compute number. \n
+        - Type 3: In this game you must find out the right-most digit of a number and the left-most digit of other number. \n
+        - Type 4: In this game you must find one of the 3 numbers of the calculation not counting your result. \n
+        - Type 5: In this game you must find out the result of the calculation. \n \n
+
+        Rules of the calculations: \n\n
+        - The calculations only have 3 numbers and your solution. \n
+        - The numbers are random between 0 and 99. Thus leaving a maximum of 2 digits for each number. \n
+        - Arithmetic operators are also random and consists only of addition and subtraction. \n
+        - The options of choice will never be negative, except in the game type 5. \n\n
+
+        Scoring rules: \n\n
+        The score varies according to the remaining time after responding and the maximum set time. \n
+        - If the maximum time is set to 30 seconds to score only the remaining time. \n
+        - If the maximum time is set to 20 seconds is twice the score of the first. \n
+        - If the maximum time is set to 10 seconds the score is five times the first. \n\n
+
+        Good game!
+    </string>
+
+    <string name="credits">
+        Developer:\n
+            Lucas Myllenno S M Lima\n
+            lucas-mlima.webnode.com\n\n\n
+        Background Music:\n
+            All You Had to Do Was Stay (Instrumental)\n
+            By: Taylor Swift.\n\n\n
+        Background Image:\n
+            Find at: desktopwallpapers.org.ua\n\n\n
+        Sound Effects:\n
+            Without license.
+
+    </string>
+
+</resources>

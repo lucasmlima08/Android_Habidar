@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.Game"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tGame"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/titles"
+                android:textColor="@color/color_text_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score"
+                android:id="@+id/score"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/color_text_info"
+                android:textSize="@dimen/score" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/responseTime"
+                    android:id="@+id/timeGame"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/color_text_info"
+                    android:textSize="@dimen/time_response" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <ProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/progressGame" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.5">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.2" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="@string/calculation"
+                        android:id="@+id/equation"
+                        android:textColor="@color/color_text_info"
+                        android:textSize="@dimen/calculation"
+                        android:layout_gravity="center_horizontal"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8"></RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.3" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="n1"
+                    android:id="@+id/op1"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:textSize="@dimen/options_choose"
+                    android:textColor="@color/color_text_numbers"
+                    android:onClick="eventGame" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="n2"
+                    android:id="@+id/op2"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:textSize="@dimen/options_choose"
+                    android:textColor="@color/color_text_numbers"
+                    android:onClick="eventGame" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="n3"
+                    android:id="@+id/op3"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:textSize="@dimen/options_choose"
+                    android:textColor="@color/color_text_numbers"
+                    android:onClick="eventGame" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="n4"
+                    android:id="@+id/op4"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:textSize="@dimen/options_choose"
+                    android:textColor="@color/color_text_numbers"
+                    android:onClick="eventGame" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="n5"
+                    android:id="@+id/op5"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:textSize="@dimen/options_choose"
+                    android:textColor="@color/color_text_numbers"
+                    android:onClick="eventGame" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="n6"
+                    android:id="@+id/op6"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_buttons_white_and_gray"
+                    android:textSize="@dimen/options_choose"
+                    android:textColor="@color/color_text_numbers"
+                    android:onClick="eventGame" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

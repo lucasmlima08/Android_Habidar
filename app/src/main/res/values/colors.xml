@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_buttons_theme_white">#fffff2fc</color>
+    <color name="color_buttons_theme_gray">#ffdbd7d9</color>
+    <color name="color_text_numbers">#ff335c85</color>
+    <color name="color_text_info">#ffffffff</color>
+    <color name="color_text_buttons">#ff000000</color>
+    <color name="color_select_definition">#ff72c3be</color>
+</resources>

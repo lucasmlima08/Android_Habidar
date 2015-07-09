@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Habidar</string>
+    <string name="dateAndCity">Campina Grande (PB), Brasil 2015</string>
+
+    <!-- Titles of Screens -->
+    <string name="tGame">Descubra</string>
+    <string name="tSettings">Definições</string>
+    <string name="tAccepted">Aceito</string>
+    <string name="tFailed">Falhou</string>
+    <string name="tRecords">Recordes</string>
+    <string name="tTypeGame">Tipos de Jogos</string>
+    <string name="tInstructions">Instruções</string>
+    <string name="tCredits">Créditos</string>
+
+    <!-- Buttons -->
+    <string name="bPlayGame">Iniciar</string>
+    <string name="bSettings">Definições</string>
+    <string name="bRecords">Recordes</string>
+    <string name="bInstructions">Instruções</string>
+    <string name="bCredits">Créditos</string>
+    <string name="bContinue">Continuar</string>
+    <string name="bListGames">Categorias</string>
+    <string name="bSaveScore">Salvar Pontos</string>
+
+    <!-- Others -->
+    <string name="calculation">Cálculo</string>
+    <string name="points">#d%b# pontos</string>
+    <string name="point">#d%b# ponto</string>
+    <string name="timeResponse">}Tempo: #d%b#s</string>
+    <string name="goodRest">Bom descanso..</string>
+    <string name="tryAgain">Tente de Novo</string>
+    <string name="music">Música</string>
+    <string name="soundEffects">Efeitos Sonoros</string>
+    <string name="responseTime">Tempo de Resposta</string>
+    <string name="restInterval">Intervalo de Descanso</string>
+    <string name="score">Pontos</string>
+
+    <!-- Seconds -->
+    <string name="seconds5">5 segundos</string>
+    <string name="seconds10">10 segundos</string>
+    <string name="seconds15">15 segundos</string>
+    <string name="seconds20">20 segundos</string>
+    <string name="seconds30">30 segundos</string>
+
+    <!-- Types of Games -->
+    <string name="allBelow">Todos Abaixo</string>
+    <string name="type1">Tipo 1</string>
+    <string name="type2">Tipo 2</string>
+    <string name="type3">Tipo 3</string>
+    <string name="type4">Tipo 4</string>
+    <string name="type5">Tipo 5</string>
+
+    <!-- Warnings -->
+    <string name="successfullySaved">Salvo com sucesso!</string>
+    <string name="notName">Você não pode salvar sem um nome!</string>
+    <string name="error">Erro ao tentar salvar pontuação!</string>
+    <string name="name">Seu nome?</string>
+    <string name="save">Salvar</string>
+    <string name="clickResetRecord1">Clique aqui #d%b# vez para deletar recordes!</string>
+    <string name="clickResetRecord2">Clique aqui #d%b# vezes para deletar recordes!</string>
+    <string name="errorResetRecords">Erro ao tentar deletar recordes!</string>
+    <string name="recordsReset">Recordes deletados com sucesso!</string>
+    <string name="errorSaveSettings">Erro ao tentar salvar definições!</string>
+
+    <string name="instructions">
+        Apresentação: \n\n
+
+        O Habidar consiste em um jogo de cálculos matemáticos onde você precisa descobrir o(s) dígito(s) escondido(s) em um cálculo
+        gerado randomicamente. Os acertos somam pontos para o seu recorde. O peso da pontuação é dado de acordo com o tempo de resposta
+        e as configurações do jogo. Você terá 6 opções ordenadas para escolher qual delas chega a solução do cálculo. \n\n
+
+        Tipos de jogo: \n\n
+
+        Existem 5 tipos diferentes de seleção no jogo. \n
+        - Tipo 1: Neste jogo você deve descobrir o dígito mais a direita de dois números do cálculo. \n
+        - Tipo 2: Neste jogo você deve descobrir o dígito mais a esquerda de dois números do cálculo. \n
+        - Tipo 3: Neste jogo você deve descobrir o dígito mais a direita de um número e o dígito mais a esquerda de outro número. \n
+        - Tipo 4: Neste jogo você deve descobrir um dos 3 números do cálculo não contando com o seu resultado. \n
+        - Tipo 5: Neste jogo você deve descobrir o resultado do cálculo. \n\n
+
+        Regras dos cálculos: \n\n
+
+        - Os cálculos possuem apenas 3 número e sua solução. \n
+        - Os números são aleatórios entre 0 e 99. Deixando assim no máximo 2 dígitos para cada número. \n
+        - Os operadores aritméticos também são aleatórios e consiste apenas de soma e subtração. \n
+        - As opções de escolha nunca serão negativas, exceto no jogo tipo 5. \n\n
+
+        Regras de pontuação: \n\n
+        A pontuação varia de acordo com o tempo restante após responder e o tempo máximo definido. \n
+        - Se o tempo máximo for definido como 30 segundos a pontuação é apenas o tempo restante. \n
+        - Se o tempo máximo for definido como 20 segundos a pontuação é o dobro do primeiro. \n
+        - Se o tempo máximo for definido como 10 segundos a pontuação é o quintuplo do primeiro. \n\n
+
+        Bom jogo!
+    </string>
+
+    <string name="credits">
+        Desenvolvedor:\n
+            Lucas Myllenno S M Lima\n
+            lucas-mlima.webnode.com\n\n\n
+        Música de fundo:\n
+            All You Had to Do Was Stay (Instrumental)\n
+            De: Taylor Swift.\n\n\n
+        Imagem de Fundo:\n
+            Encontra-se em: desktopwallpapers.org.ua\n\n\n
+        Efeitos Sonoros:\n
+            Sem licença de uso.
+
+    </string>
+
+</resources>
